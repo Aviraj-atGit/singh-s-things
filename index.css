@@ -1364,6 +1364,23 @@ body.dark-mode .about-heading {
     background-color: transparent;
     transition: transform 0.15s ease, background-color 0.3s ease;
   }
+  #typed-subtitle,
+  .subtitle {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.8rem;
+    white-space: normal; /* allow wrapping */
+    word-wrap: break-word;
+    text-align: center;
+    padding: 0 10px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    #typed-subtitle,
+    .subtitle {
+      font-size: 1.2rem;
+      line-height: 1.4;
+    }
+  }
   
   body, html {
     overflow-x: hidden;
