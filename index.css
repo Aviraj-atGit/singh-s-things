@@ -606,7 +606,7 @@ p {
     /* Button 2: Warm Coral */
     .sticky-note-btn.coral {
       background: linear-gradient(145deg, #ff6f61, #e55b50);
-      font-family: 'Comic Sans MS', cursive, sans-serif;
+      font-family: 'Verdana', Geneva, Tahoma, sans-serif;
       color: #fff5f3;
     }
     .sticky-note-btn.coral::before {
@@ -1389,7 +1389,13 @@ body.dark-mode .about-heading {
       font-size: 14px; /* or whatever looks better */
     }
   }
+  body, h1, p, a {
+    font-family: 'Inter', sans-serif;
+  }
   
+  .subtitle, #typed-subtitle {
+    font-family: 'Permanent Marker', cursive;
+  }
   body, html {
 
     overflow-x: hidden;
