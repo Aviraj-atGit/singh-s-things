@@ -1425,3 +1425,29 @@ body.dark-mode .about-heading {
       margin-top: 0.2rem;
     }
   }  
+
+  .sketchy-box {
+    display: inline-block;
+    font-family: 'Permanent Marker', cursive;
+    font-weight: 600;
+    color: #e67e22;
+    background: #fff8e1; /* light cream background for sticky note vibe */
+    padding: 4px 10px;
+    border: 2px solid #e67e22;
+    border-radius: 8px;
+    box-shadow: 3px 3px 0 #e67e22, 6px 6px 0 rgba(230, 126, 34, 0.3);
+    position: relative;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+    user-select: none;
+  }
+  
+  /* Slight floating effect */
+  .sketchy-box:hover {
+    transform: translateY(-4px) rotate(-2deg);
+    box-shadow: 6px 6px 0 #e67e22, 9px 9px 0 rgba(230, 126, 34, 0.4);
+  }
+  
+  /* Optional: a little "hand-drawn" rough border effect using SVG filter */
+  /* You can add more advanced filters if you want a truly hand-drawn style */
+  

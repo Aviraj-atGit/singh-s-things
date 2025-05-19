@@ -1,33 +1,33 @@
 const subtitle = document.getElementById('typed-subtitle');
 const textToType = "Software Engineer at GlobalLogic";
 const specialWord = "GlobalLogic";
-const specialColor = "#000000";  // black or your desired color
+const specialColor = "#e67e22"; // orange
+const specialFont = "'Permanent Marker', cursive";  // your special font
+const specialLink = "https://www.globallogic.com/";
+
 let index = 0;
 
 function type() {
   if (index < textToType.length) {
-    let currentChar = textToType.charAt(index);
-    subtitle.innerHTML += currentChar;
-    index++;
-
-    // When the specialWord starts, wrap it in a span with color style
-    if (textToType.substring(index - specialWord.length, index) === specialWord) {
-      const startPos = index - specialWord.length;
-      const before = subtitle.innerHTML.slice(0, startPos);
-      const colored = `<span style="color: ${specialColor}; font-weight: 600;">${specialWord}</span>`;
-      const after = subtitle.innerHTML.slice(index);
-      subtitle.innerHTML = before + colored + after;
+    if (textToType.substring(index, index + specialWord.length) === specialWord) {
+      subtitle.innerHTML += `<a href="${specialLink}" target="_blank" rel="noopener noreferrer" style="color: ${specialColor}; font-weight: 600; font-family: ${specialFont}; text-decoration: none;">${specialWord}</a>`;
+      index += specialWord.length;
+    } else {
+      subtitle.innerHTML += textToType.charAt(index);
+      index++;
     }
 
-    setTimeout(type, 100); // typing speed (ms)
+    setTimeout(type, 100);
   }
 }
 
-// Reset and start typing on page load
 window.addEventListener('DOMContentLoaded', () => {
-  subtitle.innerHTML = "";
-  type();
+  if (subtitle) {
+    subtitle.innerHTML = "";
+    type();
+  }
 });
+
 
 // Create Dark Mode toggle button with animation and styles
 function createDarkModeToggle() {
