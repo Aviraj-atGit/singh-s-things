@@ -1,92 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<style>#typed-subtitle { font-family: 'Permanent Marker', cursive; font-size: 1.8rem; }</style>
-<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet" />
-<style> 
-/* colorful brush subtitle styles */ 
-.subtitle { 
-  font-family: 'Permanent Marker', cursive; 
-  font-size: 1.8rem; 
-  white-space: nowrap; 
-} 
-.brush-letter { 
-  display: inline-block; 
-  transform: scale(0.9); 
-  animation: paintPop 0.3s ease forwards; 
-  text-shadow: 
-    1px 1px 2px rgba(0, 0, 0, 0.3), 
-    0 0 5px rgba(255, 255, 255, 0.4); 
-} 
-@keyframes paintPop { 
-  0% { 
-    opacity: 0; 
-    transform: scale(0.5) rotate(-10deg); 
-  } 
-  100% { 
-    opacity: 1; 
-    transform: scale(1) rotate(0deg); 
-  } 
-} 
-</style>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  
   <title>Aviraj Singh - Software Engineer</title>
 
   <link rel="icon" href="images/favicon.ico" type="image/ico" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
-  <link rel="stylesheet" href="index.css">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="index.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
-  <meta name="author" content="Aviraj Singh">
-  <meta name="description" content="Aviraj Singh - Software Engineer specializing in Ruby, C, RESTful APIs, Networking, and Search Engines">
-  <meta name="keywords" content="Aviraj Singh, software engineer, ruby, c, restful apis, networking, search engines">
-  <meta name="theme-color" content="#222222">
+  <style>
+    #typed-subtitle {
+      font-family: 'Permanent Marker', cursive;
+      font-size: 1.8rem;
+    }
 
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Aviraj Singh">
-  <meta property="og:title" content="Aviraj Singh - Software Engineer">
-  <meta property="og:description" content="Software Engineer specializing in Ruby, C, RESTful APIs, Networking, and Search Engines">
-  <meta property="og:url" content="https://www.avirajsingh.com">
-  <meta property="og:image" content="https://www.avirajsingh.com/images/thumbnail.png">
+    /* colorful brush subtitle styles */
+    .subtitle {
+      font-family: 'Permanent Marker', cursive;
+      font-size: 1.8rem;
+      white-space: nowrap;
+    }
+
+    .brush-letter {
+      display: inline-block;
+      transform: scale(0.9);
+      animation: paintPop 0.3s ease forwards;
+      text-shadow:
+        1px 1px 2px rgba(0, 0, 0, 0.3),
+        0 0 5px rgba(255, 255, 255, 0.4);
+    }
+
+    @keyframes paintPop {
+      0% {
+        opacity: 0;
+        transform: scale(0.5) rotate(-10deg);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+      }
+    }
+  </style>
+
+  <meta name="author" content="Aviraj Singh" />
+  <meta name="description" content="Aviraj Singh - Software Engineer specializing in Ruby, C, RESTful APIs, Networking, and Search Engines" />
+  <meta name="keywords" content="Aviraj Singh, software engineer, ruby, c, restful apis, networking, search engines" />
+  <meta name="theme-color" content="#222222" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Aviraj Singh" />
+  <meta property="og:title" content="Aviraj Singh - Software Engineer" />
+  <meta property="og:description" content="Software Engineer specializing in Ruby, C, RESTful APIs, Networking, and Search Engines" />
+  <meta property="og:url" content="https://www.avirajsingh.com" />
+  <meta property="og:image" content="https://www.avirajsingh.com/images/thumbnail.png" />
   <meta property="og:image:width" content="400" />
   <meta property="og:image:height" content="300" />
 </head>
 
 <body>
-    <div id="particles-js" class="particles-container"></div>
-    <div class="color-spots-container"></div>
-    <div class="shooting-stars-container"></div>
-    
+  <div id="particles-js" class="particles-container"></div>
+  <div class="color-spots-container"></div>
+  <div class="shooting-stars-container"></div>
+
+  <div id="page-wrapper">
     <div class="container">
       <header>
-        <div class="header-content"> 
-            <h1 id="name">
-              Hi<span class="funky-e">E</span>, I'm Aviraj Singh 
-              <span class="wave-hand" aria-label="waving hand" role="img">👋</span>
-            </h1>
-          
-            <!-- ✅ Subtitle for typing effect -->
-            <p id="typed-subtitle" class="subtitle"></p>
-          
-            <div class="sticky-note-container">
-              <a href="https://www.linkedin.com/in/aviraj-singh-899903352/" target="_blank" class="sticky-note-btn blue">
-                <i class="fab fa-linkedin linkedin"></i> LinkedIn
-              </a>
-          
-              <a href="files/Aviraj_resume.pdf" target="_blank" class="sticky-note-btn coral">
-                <i class="fas fa-file-alt"></i> My Resume
-              </a>
-          
-              <a href="projects.html" class="sticky-note-btn green">
-                <i class="fas fa-code"></i> About Me
-              </a>
-            </div>
+        <div class="header-content">
+          <h1 id="name">
+            Hi<span class="funky-e">E</span>, I'm Aviraj Singh
+            <span class="wave-hand" aria-label="waving hand" role="img">👋</span>
+          </h1>
+
+          <p id="typed-subtitle" class="subtitle"></p>
+
+          <div class="sticky-note-container">
+            <a href="https://www.linkedin.com/in/aviraj-singh-899903352/" target="_blank" class="sticky-note-btn blue">
+              <i class="fab fa-linkedin linkedin"></i> LinkedIn
+            </a>
+
+            <a href="files/Aviraj_resume.pdf" target="_blank" class="sticky-note-btn coral">
+              <i class="fas fa-file-alt"></i> My Resume
+            </a>
+
+            <a href="about.html" class="sticky-note-btn green">
+              <i class="fas fa-code"></i> About Me
+            </a>
           </div>
-    <script src="main.js"></script>
-    </body>
-  </html>
+        </div>
+      </header>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    // Page fold-in on load
+    window.addEventListener('DOMContentLoaded', () => {
+      const pageWrapper = document.getElementById('page-wrapper');
+      pageWrapper.classList.add('fold-in');
+    });
+
+    // Fold-out animation on internal link click
+    document.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', e => {
+        const href = link.getAttribute('href');
+        if (href && !href.startsWith('http') && !href.startsWith('files') && href !== '#') {
+          e.preventDefault();
+
+          const pageWrapper = document.getElementById('page-wrapper');
+          pageWrapper.classList.remove('fold-in');
+          pageWrapper.classList.add('fold-out');
+
+          setTimeout(() => {
+            window.location.href = href;
+          }, 800);
+        }
+      });
+    });
+    <div id="custom-cursor"></div>
+  </script>
+
+  <style>
+    #page-wrapper {
+      transform-origin: bottom center;
+      transition: transform 0.8s ease-in-out, filter 0.8s ease-in-out, opacity 0.8s ease-in-out;
+      will-change: transform, filter, opacity;
+    }
+
+    .fold-out {
+      transform: rotateX(90deg) scale(0.8);
+      filter: brightness(0.6) blur(2px);
+      opacity: 0;
+    }
+
+    .fold-in {
+      transform: rotateX(90deg) scale(0.8);
+      filter: brightness(0.6) blur(2px);
+      opacity: 0;
+      animation: foldInAnim 0.8s forwards ease-in-out;
+    }
+
+    @keyframes foldInAnim {
+      from {
+        transform: rotateX(90deg) scale(0.8);
+        filter: brightness(0.6) blur(2px);
+        opacity: 0;
+      }
+      to {
+        transform: rotateX(0deg) scale(1);
+        filter: brightness(1) blur(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</body>
+
