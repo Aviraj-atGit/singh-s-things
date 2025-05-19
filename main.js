@@ -1,32 +1,42 @@
 const subtitle = document.getElementById('typed-subtitle');
-const textToType = "Software Engineer at GlobalLogic";
+const textToType = " Software Engineer at GlobalLogic ";
 const specialWord = "GlobalLogic";
-const specialColor = "#e67e22"; // orange
-const specialFont = "'Permanent Marker', cursive";  // your special font
-const specialLink = "https://www.globallogic.com/";
-
+const specialColor = "#e67e22"; // orange color
+const linkURL = "https://www.globallogic.com/";
 let index = 0;
 
-function type() {
+function typeEffect() {
   if (index < textToType.length) {
-    if (textToType.substring(index, index + specialWord.length) === specialWord) {
-      subtitle.innerHTML += `<a href="${specialLink}" target="_blank" rel="noopener noreferrer" style="color: ${specialColor}; font-weight: 600; font-family: ${specialFont}; text-decoration: none;">${specialWord}</a>`;
-      index += specialWord.length;
-    } else {
-      subtitle.innerHTML += textToType.charAt(index);
-      index++;
+    const char = textToType.charAt(index);
+    const startIndex = textToType.indexOf(specialWord);
+    const endIndex = startIndex + specialWord.length;
+
+    if (index === startIndex) {
+      const link = document.createElement('a');
+      link.href = linkURL;
+      link.target = "_blank";
+      link.style.color = specialColor;
+      link.style.textDecoration = "none";   // Remove underline if you want
+      link.style.fontFamily = "inherit";    // Make font same as parent
+      subtitle.appendChild(link);
     }
 
-    setTimeout(type, 100);
+    if (index >= startIndex && index < endIndex) {
+      subtitle.querySelector('a').textContent += char;
+    } else {
+      subtitle.appendChild(document.createTextNode(char));
+    }
+    index++;
+    setTimeout(typeEffect, 100);
   }
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-  if (subtitle) {
-    subtitle.innerHTML = "";
-    type();
-  }
+  subtitle.textContent = ""; // clear only once here
+  typeEffect();
 });
+
+
 
 
 // Create Dark Mode toggle button with animation and styles
