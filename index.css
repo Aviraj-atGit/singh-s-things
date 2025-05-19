@@ -1381,8 +1381,17 @@ body.dark-mode .about-heading {
       line-height: 1.4;
     }
   }
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+  @media (max-width: 600px) {
+    body {
+      font-size: 14px; /* or whatever looks better */
+    }
+  }
   
   body, html {
+
     overflow-x: hidden;
   }
   
