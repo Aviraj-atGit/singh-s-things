@@ -1,30 +1,33 @@
 const subtitle = document.getElementById('typed-subtitle');
-const textToType = " Software Engineer at GlobalLogic ";
+const textToType = "Software Engineer at GlobalLogic";
+const specialWord = "GlobalLogic";
+const specialColor = "#000000";  // black or your desired color
 let index = 0;
 
-const specialWord = "GlobalLogic";
-const orangeColor = "#000000"; // black (adjust if needed)
-const tintColor = "#000000";   // black (adjust if needed)
-
-function typeEffect() {
+function type() {
   if (index < textToType.length) {
-    const char = textToType.charAt(index);
-    const startIndex = textToType.indexOf(specialWord);
-    const endIndex = startIndex + specialWord.length;
-
-    if (index >= startIndex && index < endIndex) {
-      const letter = char;
-      const span = document.createElement("span");
-      span.style.color = (letter === "L") ? tintColor : orangeColor;
-      span.textContent = letter;
-      subtitle.appendChild(span);
-    } else {
-      subtitle.textContent += char;
-    }
+    let currentChar = textToType.charAt(index);
+    subtitle.innerHTML += currentChar;
     index++;
-    setTimeout(typeEffect, 100);
+
+    // When the specialWord starts, wrap it in a span with color style
+    if (textToType.substring(index - specialWord.length, index) === specialWord) {
+      const startPos = index - specialWord.length;
+      const before = subtitle.innerHTML.slice(0, startPos);
+      const colored = `<span style="color: ${specialColor}; font-weight: 600;">${specialWord}</span>`;
+      const after = subtitle.innerHTML.slice(index);
+      subtitle.innerHTML = before + colored + after;
+    }
+
+    setTimeout(type, 100); // typing speed (ms)
   }
 }
+
+// Reset and start typing on page load
+window.addEventListener('DOMContentLoaded', () => {
+  subtitle.innerHTML = "";
+  type();
+});
 
 // Create Dark Mode toggle button with animation and styles
 function createDarkModeToggle() {

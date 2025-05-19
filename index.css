@@ -1400,4 +1400,28 @@ body.dark-mode .about-heading {
 
     overflow-x: hidden;
   }
+  #typed-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-align: left;
+    color: #333;
+    margin-top: 0.3rem;
+  }
+  #typed-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;    /* Desktop font size */
+    text-align: left;
+    color: #333;
+    margin-top: 0.3rem;
+  }
   
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    #typed-subtitle {
+      font-size: 1rem;   /* Thoda chhota font size mobile ke liye */
+      text-align: left;  /* Left align same as desktop */
+      margin-top: 0.2rem;
+    }
+  }  
